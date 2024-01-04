@@ -1,0 +1,92 @@
+/* profile.component.css */
+.profile-container {
+  display: flex;
+  justify-content: space-between; /* Adjusted to space-around for better distribution */
+
+}
+
+.left-panel {
+  width: 30%;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background-color: #ecffff;
+  margin: 20px;
+  height: 70%;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(33, 150, 243, 0.5);
+
+}
+
+.left-panel ul {
+  list-style-type: none; /* Remove default list styles */
+  padding: 0;
+}
+
+.left-panel li {
+  margin-bottom: 10px; /* Added margin between list items */
+}
+
+.left-panel li strong {
+  font-weight: 500; /* Reduced the strength of the strong tag */
+}
+
+
+.right-panel {
+  /*flex: 3;*/
+  width: 45%; /* Adjusted for better responsiveness */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.card-image {
+  max-width: 100px; /* Adjusted for better image size */
+  max-height: 100px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 40px;
+  border: 1px solid #d2d2d2;
+  transition: transform 0.3s ease-in-out; /* Added transition for smooth effect */
+}
+
+.card-image:hover {
+  transform: scale(1.1); /* Added scale transformation on hover */
+  box-shadow: 0 2px 4px rgba(33, 150, 243, 0.5);
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the entire container */
+  border-radius: 50%; /* Maintains the circular shape */
+}
+
+/* profile.component.css */
+.editButton {
+  margin-left: 20px;
+  background-color: #4caf50; /* Green background color */
+  color: white; /* White text color */
+  border: none; /* No border */
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center; /* Center text */
+  /*text-decoration: none; !* No underline *!*/
+  display: inline-block; /* Display as inline-block to adjust size based on content */
+  font-size: 14px; /* Font size */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 4px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Simple shadow */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.editButton:hover {
+  background-color: #45a049; /* Darker green on hover */
+  box-shadow: 0 2px 4px rgba(33, 150, 243, 0.5);
+}
+

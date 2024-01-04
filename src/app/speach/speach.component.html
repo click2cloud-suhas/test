@@ -1,0 +1,19 @@
+<!-- speech.component.html -->
+
+<div class="speech-container">
+
+  <label for="textToSpeak">Enter text to speak:</label>
+  <textarea id="textToSpeak" [(ngModel)]="textToSpeak" placeholder="Type your text here"></textarea>
+
+  <label for="selectedLanguage">Select Language:</label>
+  <!-- Dropdown for language selection -->
+  <select id="selectedLanguage" [(ngModel)]="selectedLanguage">
+    <option value="hi-IN">Hindi</option>
+    <option value="en-US">English</option>
+    <option value="mr-IN">Marathi</option>
+    <option value="ur-PK">Urdu</option>
+    <option value="ar-SA">Arabic</option>
+  </select>
+
+  <button (click)="speak()">Speak</button>
+</div>

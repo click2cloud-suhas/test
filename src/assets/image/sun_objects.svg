@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="66px" height="66px" viewBox="0 0 66 66" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 0L66 0L66 66L0 66L0 0Z" id="Rectangle" fill="#000000" fill-opacity="0" fill-rule="evenodd" stroke="none" />
+  <g id="046-sun">
+    <path d="M17.4023 34.8047C7.80669 34.8047 0 26.998 0 17.4023C0 7.80669 7.80669 0 17.4023 0C26.998 0 34.8047 7.80669 34.8047 17.4023C34.8047 26.998 26.998 34.8047 17.4023 34.8047ZM17.4023 3.86719C9.93906 3.86719 3.86719 9.93906 3.86719 17.4023C3.86719 24.8656 9.93906 30.9375 17.4023 30.9375C24.8656 30.9375 30.9375 24.8656 30.9375 17.4023C30.9375 9.93906 24.8656 3.86719 17.4023 3.86719Z" transform="translate(15.597656 15.597656)" id="Shape" fill="#FFFFFF" stroke="none" />
+    <path d="M0 0L3.86719 0L3.86719 11.7305L0 11.7305L0 0Z" transform="translate(31.066406 0)" id="Path" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+    <path d="M0 0L3.86719 0L3.86719 11.7305L0 11.7305L0 0Z" transform="translate(31.066406 54.26953)" id="Path" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+    <path d="M0 0L11.7305 0L11.7305 3.86719L0 3.86719L0 0Z" transform="translate(0 31.066406)" id="Path" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+    <path d="M0 0L11.7305 0L11.7305 3.86719L0 3.86719L0 0Z" transform="translate(54.26953 31.066406)" id="Path" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+    <path d="M0 0L11.5996 3.8147e-06L11.5996 3.86653L0 3.86653L0 0Z" transform="matrix(0.70710677 -0.70710677 0.70710677 0.70710677 8.383301 54.870483)" id="Path" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+    <path d="M3.8147e-06 0L11.5996 3.8147e-06L11.5996 3.86653L0 3.86653L3.8147e-06 0Z" transform="matrix(0.70710677 -0.70710677 0.70710677 0.70710677 46.665527 16.596313)" id="Path" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+    <path d="M0 0L3.86653 0L3.86653 11.5996L0 11.5996L0 0Z" transform="matrix(0.70710677 -0.70710677 0.70710677 0.70710677 46.661133 49.406494)" id="Path" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+    <path d="M0 0L3.86653 0L3.86654 11.5996L1.43051e-06 11.5996L0 0Z" transform="matrix(0.70710677 -0.70710677 0.70710677 0.70710677 8.386719 11.124207)" id="Path" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+  </g>
+</svg>

@@ -1,0 +1,175 @@
+<!-- home.component.html -->
+<div class="admin-panel">
+  <div class="tabs">
+    <!-- Your tabs content goes here -->
+    <div class="tab">My Farm</div>
+    <div class="tab">Monitoring</div>
+    <div class="tab">Soil Meter</div>
+    <div class="tab">Crop Planning</div>
+    <div class="tab">Dashboard</div>
+    <div class="tab">Mission Planner</div>
+    <div class="tab">Sustainability</div>
+    <div class="tab">Storage</div>
+    <div class="tab">Live Stock Monitoring</div>
+    <div class="tab">Marketplace</div>
+    <div class="tab">Framework</div>
+  </div>
+
+  <div class="content">
+    <!-- Azure Map container -->
+    <div #mapView class="azureMap"></div>
+
+  </div>
+
+  <div class="rightTabs">
+
+    <h4 class="Heading">
+      Farm List
+    </h4>
+
+    <!-- List of Farms -->
+    <div class="farmList">
+      <ul>
+        <div class="Card">
+          <li class="CardText">Quatar Farm</li>
+        </div>
+
+        <div class="Card">
+          <li class="CardText">Nagpur Farm</li>
+        </div>
+        <div>
+
+        </div>
+        <div class="Card">
+          <li class="CardText">Bhandara Farm</li>
+        </div>
+
+        <div class="Card">
+          <li class="CardText">Delhi Farm</li>
+        </div>
+
+
+      </ul>
+    </div>
+
+    <div class="WorkflowRow">
+      <h4 class="Heading">
+        AI Workflow
+      </h4>
+      <button> <img src="../../assets/image/refresh_icon.svg" alt="Refresh Icon" />
+        Re-run
+      </button>
+    </div>
+
+
+
+    <div class="satelliteList">
+
+          <div class="SatelliteCard">
+            <img src="assets/image/sentinel.svg"/>
+            <h3>
+              Sentinal
+            </h3>
+          </div>
+
+          <div class="SatelliteCard">
+            <img src="assets/image/modis.svg"/>
+            <h3>
+              Modis
+            </h3>
+          </div>
+
+          <div class="SatelliteCard">
+            <img src="assets/image/landsat.svg"/>
+            <h3>
+              Landsat
+            </h3>
+          </div>
+
+          <div class="SatelliteCard">
+            <img src="assets/image/airbus.svg"/>
+            <h3>
+              Airbus
+            </h3>
+
+          </div>
+    </div>
+
+
+
+
+
+
+    <div class="WorkflowRow">
+      <h4 class="Heading">
+        Current Weather
+      </h4>
+      <button> More Details
+      </button>
+    </div>
+
+    <div class="currentWeather">
+
+      <div class="weatherCard">
+
+        <img src="../../assets/image/sun_objects.svg"/>
+        <h1>
+          31.5°C
+        </h1>
+        <div class="weatherColumn">
+
+          <h4>
+            Tuesday, Today
+          </h4>
+          <h4>
+            Clean
+          </h4>
+          <h4>
+            November 14, 2023
+          </h4>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <h4 class="Heading">
+      Government Schemes
+    </h4>
+
+    <div class="schemeList">
+      <ul>
+        <div class="Card">
+          <li class="CardText">Pradhan Mantri Kisan Samman Nidhi Yojana (PM-KISAN):</li>
+        </div>
+
+        <div class="Card">
+          <li class="CardText">Pradhan Mantri Fasal Bima Yojana (PMFBY):</li>
+        </div>
+        <div>
+
+        </div>
+        <div class="Card">
+          <li class="CardText">Soil Health Card Scheme:</li>
+        </div>
+
+        <div class="Card">
+          <li class="CardText">National Agriculture Market (e-NAM) Scheme:</li>
+        </div>
+        <div class="Card">
+          <li class="CardText">National Agriculture Market (e-NAM) Scheme:</li>
+        </div>
+
+
+      </ul>
+    </div>
+
+
+
+
+
+
+  </div>
+</div>

@@ -1,0 +1,29 @@
+/* myfarm.component.css */
+
+.backgroundContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+}
+
+.leftContainer,.rightContainer {
+  height: 1100px;
+  transition: width 0.5s ease;
+}
+
+.leftContainer {
+  width: 900px;
+  background-color: #cd0000;
+}
+
+.rightContainer {
+  width: 500px;
+  background-color: #00cd00;
+}
+
+
+#google-map{
+  width:100%;
+  height: 1300px;
+}

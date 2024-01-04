@@ -1,0 +1,58 @@
+<div class="row">
+
+  <div class="container-list">
+    <div *ngFor="let farm of farms" class="card">
+      <div class="card-header">
+        <h5>{{ farm.farmTitle }}</h5>
+      </div>
+      <div class="card-body">
+
+        <div class="card_column">
+          <p class="card-text">Master Farm ID: {{ farm.masterFarmId }}</p>
+          <p class="card-text">Location: {{ farm.farmLocation }}</p>
+
+        </div>
+
+
+        <ng-container *ngIf="farm.farmIndicesImageURL; else noImage">
+          <img [src]="farm.farmIndicesImageURL" alt="Farm Image" class="img-fluid">
+        </ng-container>
+        <ng-template #noImage>
+          <p class="card-text">Image Not Available</p>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+
+  <button  (click)="ViewData()" type="submit">View Data</button>
+
+
+
+
+  <div class="container-list">
+    <div *ngFor="let farm of farms" class="card">
+      <div class="card-header">
+        <h5>{{ farm.farmTitle }}</h5>
+      </div>
+      <div class="card-body">
+
+        <div class="card_column">
+          <p class="card-text">Master Farm ID: {{ farm.masterFarmId }}</p>
+          <p class="card-text">Location: {{ farm.farmLocation }}</p>
+
+        </div>
+
+
+        <ng-container *ngIf="farm.farmIndicesImageURL; else noImage">
+          <img [src]="farm.farmIndicesImageURL" alt="Farm Image" class="img-fluid">
+        </ng-container>
+        <ng-template #noImage>
+          <p class="card-text">Image Not Available</p>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+

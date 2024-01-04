@@ -1,0 +1,67 @@
+<!-- my-home.component.html -->
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav mode="side" [opened]="isSidenavOpened">
+    <div class="side-panel-content">
+      <nav>
+        <a routerLink="/" routerLinkActive="active">Home</a>
+        <a routerLink="/app-dashboard" routerLinkActive="active">Dashboard</a>
+        <a routerLink="/students" routerLinkActive="active">Students</a>
+      </nav>
+    </div>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button mat-icon-button (click)="toggleSidenav()">
+        <mat-icon>{{ isSidenavOpened ? 'menu_open' : 'menu' }}</mat-icon>
+      </button>
+      <span>UI</span>
+    </mat-toolbar>
+
+    <div class="filter-container">
+      <div>
+        <label>Class</label>
+        <select [(ngModel)]="selectedClass">
+          <option value="">All Classes</option>
+          <option value="classA">Class A</option>
+          <option value="classB">Class B</option>
+          <option value="classC">Class C</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Class Section</label>
+        <select [(ngModel)]="selectedSection">
+          <option value="">All Sections</option>
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+        </select>
+      </div>
+
+      <button mat-raised-button color="primary" (click)="filterData()">Filter Data</button>
+
+<!--      <button mat-raised-button color="accent" (click)="filterData()">Add Data</button>-->
+
+
+
+    </div>
+
+    <div class="grid-view">
+      <div class="card" *ngFor="let student of filteredData"  routerLink="/app-profile">
+        <div class="card-image">
+          <img [src]="student.image" alt="{{ student.name }}">
+        </div>
+
+        <div class="card-content">
+          <h5>Name : {{ student.name }}</h5>
+          <h5>Age: {{ student.age }}</h5>
+          <h5>Address : {{ student.address }}</h5>
+        </div>
+      </div>
+
+      <div *ngIf="filteredData.length === 0" class="no-results">No results found.</div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

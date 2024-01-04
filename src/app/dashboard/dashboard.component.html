@@ -1,0 +1,163 @@
+<!-- dashboard.component.html -->
+
+<div id="marksheetContent" class="dashboard-container">
+  <div class="student-information">
+    <h2>Student Information</h2>
+
+    <div class="form-group">
+      <label for="studentName">Student Name:</label>
+      <input type="text" id="studentName" [(ngModel)]="studentName" placeholder="Enter Student Name">
+    </div>
+
+    <div class="form-group">
+      <label for="fatherName">Father Name:</label>
+      <input type="text" id="fatherName" [(ngModel)]="fatherName" placeholder="Enter Father Name">
+    </div>
+
+    <div class="form-group">
+      <label for="motherName">Mother Name:</label>
+      <input type="text" id="motherName" [(ngModel)]="motherName" placeholder="Enter Mother Name">
+    </div>
+
+    <div class="form-group">
+      <label for="imageUpload">Choose Image:</label>
+      <input type="file" id="imageUpload" (change)="onImageChange($event)">
+    </div>
+
+    <!-- Display selected image -->
+    <div *ngIf="selectedImage">
+      <label>Selected Image:</label>
+      <img [src]="selectedImageURL" alt="Selected Image">
+    </div>
+
+    <div class="form-group">
+      <label for="address">Address:</label>
+      <textarea id="address" [(ngModel)]="address" placeholder="Enter Address"></textarea>
+    </div>
+  </div>
+
+  <div class="subject-details">
+    <h2>Enter Subject Details</h2>
+
+    <div class="form-group">
+      <label for="subjectSelect">Select Subject:</label>
+      <select id="subjectSelect" [(ngModel)]="selectedSubject">
+        <option *ngFor="let subject of availableSubjects" [value]="subject">{{ subject }}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="totalMarks">Total Marks:</label>
+      <input type="number" id="totalMarks" [(ngModel)]="totalMarks" placeholder="Enter Total Marks">
+    </div>
+
+    <div class="form-group">
+      <label for="obtainedMarks">Obtained Marks:</label>
+      <input type="number" id="obtainedMarks" [(ngModel)]="obtainedMarks" placeholder="Enter Obtained Marks">
+    </div>
+
+    <button (click)="addSubject()">Add</button>
+
+    <h2>Added Subjects</h2>
+    <table>
+      <thead>
+      <tr>
+        <th>Subject</th>
+        <th>Total Marks</th>
+        <th>Obtained Marks</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let subject of subjects">
+        <td>{{ subject.name }}</td>
+        <td>{{ subject.totalMarks }}</td>
+        <td>{{ subject.obtainedMarks }}</td>
+      </tr>
+      </tbody>
+    </table>
+    <h2>Summary</h2>
+    <p>Total Marks: {{ getTotalMarks() }}</p>
+    <p>Obtained Marks: {{ getObtainedMarks() }}</p>
+    <p>Percentage: {{ getPercentage() | number:'1.2-2' }}%</p>
+    <p>Grade: {{ getGrade() }}</p>
+    <button (click)="downloadMarksheet()">Download Marksheet</button>
+  </div>
+
+
+  <div class="class-details">
+    <h2>Class Details</h2>
+    <div class="form-group">
+      <label for="classSelect">Select Class:</label>
+      <select id="classSelect" [(ngModel)]="selectedClass">
+        <option *ngFor="let standard of availableClasses" [value]="standard">{{ standard }}</option>
+      </select>
+    </div>
+    <button (click)="submitStudentCard()">Submit Student Card</button>
+  </div>
+
+  <!-- Submitted Student Cards Expansion Panel -->
+
+  <div class="infoCard">
+    <ng-container *ngIf="studentCards.length > 0; else noCards">
+      <div *ngFor="let card of studentCards" class="card">
+        <mat-expansion-panel class="custom-panel">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{ card.studentName }} - {{ card.selectedClass }}
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="card-content">
+
+            <div class="personal-info">
+              <strong>Student Name:</strong> {{ card.studentName }}<br>
+              <strong>Class:</strong> {{ card.selectedClass }}<br>
+              <strong>Father Name:</strong> {{ card.fatherName }}<br>
+              <strong>Mother Name:</strong> {{ card.motherName }}<br>
+              <strong>Address:</strong> {{ card.address }}<br>
+            </div>
+
+            <div class="card-image">
+<!--              <strong>Selected Image:</strong>-->
+              <img [src]="card.selectedImageURL" alt="Student Image">
+            </div>
+          </div>
+          <div class="subject-details">
+            <strong>Added Subjects:</strong>
+            <table>
+              <thead>
+              <tr>
+                <th>Subject</th>
+                <th>Total Marks</th>
+                <th>Obtained Marks</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let subject of card.subjects">
+                <td>{{ subject.name }}</td>
+                <td>{{ subject.totalMarks }}</td>
+                <td>{{ subject.obtainedMarks }}</td>
+              </tr>
+              </tbody>
+            </table>
+
+            <strong>Summary:</strong><br>
+            Total Marks: {{ card.totalMarks }}<br>
+            Obtained Marks: {{ card.obtainedMarks }}<br>
+            Percentage: {{ card.percentage | number:'1.2-2' }}%<br>
+            Grade: {{ card.grade }}<br>
+          </div>
+        </mat-expansion-panel>
+      </div>
+    </ng-container>
+    <ng-template #noCards>
+      <div class="no-cards-message">
+        Student Record Not Available.
+      </div>
+    </ng-template>
+  </div>
+
+
+
+
+
+</div>

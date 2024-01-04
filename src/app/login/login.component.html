@@ -1,0 +1,23 @@
+<!-- login.component.html -->
+
+<div class="mainContainer">
+  <div class="login-container">
+    <form class="login-form">
+      <h2>Login</h2>
+
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+      <div class="button-container">
+        <button (click)="login()" type="submit">Login</button>
+        <h5 (click)="navigateToForgetPassword()">Forget password</h5>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+

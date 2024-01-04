@@ -1,0 +1,36 @@
+<!-- profile.component.html -->
+<div class="profile-container">
+  <!-- Left Panel -->
+  <div class="left-panel">
+
+    <h2>Student Information
+      <button class="editButton" routerLink="/app-dashboard">Edit</button>
+    </h2>
+    <div class="card-image">
+      <img src="../../assets/image/11.jpg" alt="Student Image" />
+    </div>
+    <ul>
+      <li ><strong>Student Name:</strong> {{ 'John Doe' }}</li>
+      <li><strong>Father Name:</strong> {{ 'John Doe Sr.' }}</li>
+      <li><strong>Mother Name:</strong> {{ 'Jane Doe' }}</li>
+      <li><strong>Address:</strong> {{ '123 Main Street, City' }}</li>
+      <li><strong>Current Standard:</strong> {{ '7th Standard' }}</li>
+      <li><strong>Current Section:</strong> {{ 'B Section' }}</li>
+    </ul>
+  </div>
+
+  <!-- Right Panel -->
+  <div class="right-panel">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Expansion Tile
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <!-- Content for the Expansion Tile goes here -->
+      <img src="../../assets/image/landsat.svg" alt="Dummy Image" width="100%" />
+      <p>Dummy content for the expansion tile.</p>
+    </mat-expansion-panel>
+  </div>
+
+</div>
